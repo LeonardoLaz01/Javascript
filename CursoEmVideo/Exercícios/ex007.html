@@ -21,9 +21,9 @@
             var nota1 = Number(window.prompt(`Qual foi a primeira nota de ${nome}?`))
             var nota2 = Number(window.prompt(`Além da nota ${nota1}, qual foi a outra nota de ${nome}?`))
             var res = document.querySelector('p#res')
-            res.innerHTML = `<p>Calculando a média final de <span>${nome}</span>.</p> 
-            res.innerHTML += <p>As notas obtidas foram <span>${nota1} e ${nota2}</span>.</p> 
-            res.innerHTML += <p>A média final será <span>${(nota1+nota2)/2}</span>.</p>`
+            res.innerHTML = `<p>Calculando a média final de <span>${nome}</span>.</p>` 
+            res.innerHTML += `<p>As notas obtidas foram <span>${nota1} e ${nota2}</span>.</p>`
+            res.innerHTML += `<p>A média final será <span>${(nota1+nota2)/2}</span>.</p>`
         }
     </script>
 </body>
