@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body{font-family: Arial, Helvetica, sans-serif;}
+        input#botao{padding: 30px; font-size: medium;}
+        span{background-color: yellow;}
+    </style>
+</head>
+<body>
+    <h1>Média do aluno v1.0</h1>
+    <input type="button" value="Calcular média" id="botao" onclick="calcular()">
+    <p id="res">O resultado vai aparecer aqui...</p>
+    <script>
+        function calcular(){
+            var nome = window.prompt('Qual é o nome do aluno?')
+            var nota1 = Number(window.prompt(`Qual foi a primeira nota de ${nome}?`))
+            var nota2 = Number(window.prompt(`Além da nota ${nota1}, qual foi a outra nota de ${nome}?`))
+            var res = document.querySelector('p#res')
+            res.innerHTML = `<p>Calculando a média final de <span>${nome}</span>.</p>` 
+            res.innerHTML += `<p>As notas obtidas foram <span>${nota1} e ${nota2}</span>.</p>`
+            res.innerHTML += `<p>A média final será <span>${(nota1+nota2)/2}</span>.</p>`
+        }
+    </script>
+</body>
+</html>
