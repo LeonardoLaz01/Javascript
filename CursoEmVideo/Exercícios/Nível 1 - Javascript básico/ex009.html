@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+    <link rel="stylesheet" href="ex009.css">
+</head>
+<body>
+    <h1>Contador de cliques</h1>
+    <button id="contador" onclick="contador()">Clique em mim</button>
+    <button id="zerador" onclick="zerar()">Zerar o contador</button>
+    <p id="res"></p>
+    <script>
+        num = 1
+        let res = window.document.getElementById('res')
+        res.innerHTML = `O contador está com ${0} cliques`
+        function contador(){
+            res.innerHTML = `O contador está com ${num++} cliques`
+        } function zerar() {
+            num = 0
+            res.innerHTML = null
+        }
+    </script>
+</body>
+</html>
