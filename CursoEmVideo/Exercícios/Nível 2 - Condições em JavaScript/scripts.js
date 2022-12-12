@@ -20,4 +20,18 @@ function media() {
         var msg = 'ÍMPAR'
     } var res = document.getElementById('res')
     res.innerHTML = `<p>O número ${num} que foi digitado é <strong>${msg}</strong>!</p>`
+} function maior() {
+    var num1 = Number(window.prompt('Digite um número:'))
+    var num2 = Number(window.prompt('Digite outro número:'))
+    var maior = num1
+    var res = document.getElementById('res')
+    if (num1 != num2) {
+        if (num2 > maior) {
+            maior = num2
+        } else {
+            maior = num1
+        } res.innerHTML = `<p>Analisando os valores <mark>${num1}</mark> e <mark>${num2}</mark>, o maior valor é <strong>${maior}</strong></p>`
+    } else {
+        res.innerHTML = `<p>Analisando os valores <mark>${num1}</mark> e <mark>${num2}</mark>, ambos são <strong>IGUAIS</strong></p>`
+    }
 }
