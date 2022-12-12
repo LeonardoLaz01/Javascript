@@ -35,4 +35,15 @@ function media() {
 } function interacao() {
     var agora = new Date()
     res.innerHTML = `<p>O que eu recebi do sistema foi <mark>${agora}</mark></p>`
+} function dataehora() {
+    var agora = new Date()
+    var meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
+    var dias = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
+    res.innerHTML = `<p>Dia: <mark>${agora.getDate()}</mark></p>`
+    res.innerHTML += `<p>Mês: <mark>${meses[agora.getMonth()]}</mark></p>`
+    res.innerHTML += `<p>Ano: <mark>${agora.getFullYear()}</mark></p>`
+    res.innerHTML += `<p>Dia da semana: <mark>${dias[agora.getDay()]}</mark></p>`
+    res.innerHTML += `<p>Hora: <mark>${agora.getHours()}</mark></p>`
+    res.innerHTML += `<p>Minutos: <mark>${agora.getMinutes()}</mark></p>`
+    res.innerHTML += `<p>Segundos: <mark>${agora.getSeconds()}</mark></p>`
 }
