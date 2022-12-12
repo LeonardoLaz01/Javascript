@@ -12,4 +12,12 @@ function media() {
     } else {
         res.innerHTML += `<p>A mensagem que temos é: <strong style='color:red;'>Estude um pouco mais pouco!</strong></p>`
     }
+} function parouimpar() {
+    var num = Number(window.prompt('Digite um número:'))
+    if (num % 2 == 0) {
+        var msg = 'PAR'
+    } else {
+        var msg = 'ÍMPAR'
+    } var res = document.getElementById('res')
+    res.innerHTML = `<p>O número ${num} que foi digitado é <strong>${msg}</strong>!</p>`
 }
