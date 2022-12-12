@@ -1,9 +1,9 @@
+var res = document.getElementById('res')
 function media() {
     var nome = window.prompt('Qual o nome do aluno?')
     var nota1 = Number(window.prompt(`Qual foi a primeira nota de ${nome}?`))
     var nota2 = Number(window.prompt(`Além de ${nota1}, qual foi a outra nota de ${nome}?`))
     var media = (nota1 + nota2) / 2
-    var res = document.getElementById('res')
     res.innerHTML = `<p>Calculando a média final de <mark>${nome}<mark>.</p>`
     res.innerHTML += `<p>As notas obtidas foram <mark>${nota1} e ${nota2}</mark>.</p>`
     res.innerHTML += `<p>A média final será <mark>${media}</mark>.</p>`
@@ -18,13 +18,11 @@ function media() {
         var msg = 'PAR'
     } else {
         var msg = 'ÍMPAR'
-    } var res = document.getElementById('res')
-    res.innerHTML = `<p>O número ${num} que foi digitado é <strong>${msg}</strong>!</p>`
+    } res.innerHTML = `<p>O número ${num} que foi digitado é <strong>${msg}</strong>!</p>`
 } function maior() {
     var num1 = Number(window.prompt('Digite um número:'))
     var num2 = Number(window.prompt('Digite outro número:'))
     var maior = num1
-    var res = document.getElementById('res')
     if (num1 != num2) {
         if (num2 > maior) {
             maior = num2
@@ -34,4 +32,7 @@ function media() {
     } else {
         res.innerHTML = `<p>Analisando os valores <mark>${num1}</mark> e <mark>${num2}</mark>, ambos são <strong>IGUAIS</strong></p>`
     }
+} function interacao() {
+    var agora = new Date()
+    res.innerHTML = `<p>O que eu recebi do sistema foi <mark>${agora}</mark></p>`
 }
