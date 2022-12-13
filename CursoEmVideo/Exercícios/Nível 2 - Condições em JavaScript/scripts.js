@@ -46,4 +46,10 @@ function media() {
     res.innerHTML += `<p>Hora: <mark>${agora.getHours()}</mark></p>`
     res.innerHTML += `<p>Minutos: <mark>${agora.getMinutes()}</mark></p>`
     res.innerHTML += `<p>Segundos: <mark>${agora.getSeconds()}</mark></p>`
+} function idade() {
+    var nasc = Number(window.prompt('Em que ano você nasceu?'))
+    var agora = new Date()
+    var ano = agora.getFullYear()
+    var idade = ano - nasc
+    res.innerHTML = `<p>Quem nasceu em ${nasc} vai completar <strong>${idade}</strong> anos em ${ano}.</p>`
 }
