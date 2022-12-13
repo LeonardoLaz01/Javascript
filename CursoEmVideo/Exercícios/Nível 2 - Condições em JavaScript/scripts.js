@@ -1,4 +1,6 @@
 var res = document.getElementById('res')
+var agora = new Date()
+var randnum = Math.floor(Math.random() * 101)
 function media() {
     var nome = window.prompt('Qual o nome do aluno?')
     var nota1 = Number(window.prompt(`Qual foi a primeira nota de ${nome}?`))
@@ -33,10 +35,8 @@ function media() {
         res.innerHTML = `<p>Analisando os valores <mark>${num1}</mark> e <mark>${num2}</mark>, ambos são <strong>IGUAIS</strong></p>`
     }
 } function interacao() {
-    var agora = new Date()
     res.innerHTML = `<p>O que eu recebi do sistema foi <mark>${agora}</mark></p>`
 } function dataehora() {
-    var agora = new Date()
     var meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
     var dias = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
     res.innerHTML = `<p>Dia: <mark>${agora.getDate()}</mark></p>`
@@ -48,13 +48,23 @@ function media() {
     res.innerHTML += `<p>Segundos: <mark>${agora.getSeconds()}</mark></p>`
 } function idade() {
     var nasc = Number(window.prompt('Em que ano você nasceu?'))
-    var agora = new Date()
     var ano = agora.getFullYear()
     var idade = ano - nasc
     res.innerHTML = `<p>Quem nasceu em ${nasc} vai completar <strong>${idade}</strong> anos em ${ano}.</p>`
 } function gerador() {
-    var randnum = Math.floor(Math.random() * 101)
     res.innerHTML += `<p>Acabei de pensar no número <mark>${randnum}</mark>!</p>`
 } function limpar() {
     res.innerHTML = ''
+} function adivinhar() {
+    var num = window.prompt('Qual seu palpite?')
+    if (num == randnum) {
+        res.innerHTML += `<p><strong>PARABÉNS!</strong> Você acertou! Eu tinha sorteado o valor ${randnum}!</p>`
+        var botao = document.getElementById('botao').style.visibility = 'hidden'
+    } else {
+        if (num < randnum) {
+            res.innerHTML += `<p>Você falou ${num}. Meu número é <strong>MAIOR!</strong></p>`
+        } else {
+            res.innerHTML += `<p>Você falou ${num}. Meu número é <strong>MENOR!</strong></p>`
+        }
+    }
 }
