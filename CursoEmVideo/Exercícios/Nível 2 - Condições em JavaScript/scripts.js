@@ -52,4 +52,9 @@ function media() {
     var ano = agora.getFullYear()
     var idade = ano - nasc
     res.innerHTML = `<p>Quem nasceu em ${nasc} vai completar <strong>${idade}</strong> anos em ${ano}.</p>`
+} function gerador() {
+    var randnum = Math.floor(Math.random() * 101)
+    res.innerHTML += `<p>Acabei de pensar no número <mark>${randnum}</mark>!</p>`
+} function limpar() {
+    res.innerHTML = ''
 }
