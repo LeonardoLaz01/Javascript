@@ -67,4 +67,25 @@ function media() {
             res.innerHTML += `<p>Você falou ${num}. Meu número é <strong>MENOR!</strong></p>`
         }
     }
+} function somar() {
+    var valor1 = Number(window.prompt('Primeiro valor:'))
+    var valor2 = Number(window.prompt('Segundo valor:'))
+    var escolha = window.prompt(`Valores informados: ${valor1} e ${valor2}.
+O que vamos fazer?
+[1] Somar
+[2] subtrair
+[3] Multiplicar
+[4] Dividir`)
+    res.innerHTML = `<h2>Calculando...<h2>`
+    if (escolha == 1) {
+        res.innerHTML += `${valor1} + ${valor2} = <strong>${valor1+valor2}</strong>`
+    } else if (escolha == 2) {
+        res.innerHTML += `${valor1} - ${valor2} = <strong>${valor1 - valor2}</strong>`
+    } else if (escolha == 3) {
+        res.innerHTML += `${valor1} x ${valor2} = <strong>${valor1 * valor2}</strong>`
+    } else if (escolha == 4) {
+        res.innerHTML += `${valor1} / ${valor2} = <strong>${valor1 / valor2}</strong>`
+    } else {
+        res.innerHTML += `OPÇÃO INVÁLIDA! Você digitou ${valor1} e ${valor2}, mas não sei o que fazer com eles.`
+    }
 }
