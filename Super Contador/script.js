@@ -8,7 +8,7 @@ function contador() {
         window.alert('Passo inválido! Considerando PASSO 1')
         passo = 1
     }
-    if (inicio != null) {
+    if (inicio != '') {
         res.innerHTML = '<br>Contando:<br>';
         for (var c = Number(inicio); c <= Number(fim); c += Number(passo)) {
          res.innerHTML += `${c} &#128073`;
