@@ -9,10 +9,10 @@ function contador() {
         passo = 1
     }
     if (inicio != '') {
-        res.innerHTML = '<br>Contando:<br>';
+        res.innerHTML = '<br>Contando:<br>'
         for (var c = Number(inicio); c <= Number(fim); c += Number(passo)) {
-         res.innerHTML += `${c} &#128073`;
-        } res.innerHTML += `&#127988`;
+         res.innerHTML += `${c} &#128073`
+        } res.innerHTML += `&#127988`
     } else {
         res.innerHTML = '<p>Impossível contar!</p>'
     }
