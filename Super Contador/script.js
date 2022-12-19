@@ -8,10 +8,16 @@ function contador() {
         window.alert('Passo inválido! Considerando PASSO 1')
         passo = 1
     }
-    if (inicio != '') {
+    if (inicio != '' && fim != '' ) {
         res.innerHTML = '<br>Contando:<br>'
-        for (var c = Number(inicio); c <= Number(fim); c += Number(passo)) {
-         res.innerHTML += `${c} &#128073`
+        if ( inicio < fim) {
+            for (var c = Number(inicio); c <= Number(fim); c += Number(passo)) {
+                res.innerHTML += `${c} &#128073`
+            } 
+        } else {
+            for (var c = Number(inicio); c >= Number(fim); c-= Number(passo)) {
+                res.innerHTML += `${c} &#128073`
+            }
         } res.innerHTML += `&#127988`
     } else {
         res.innerHTML = '<p>Impossível contar!</p>'
