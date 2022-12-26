@@ -1,5 +1,5 @@
-const lista = []
-var tab = document.getElementById('tab')
+const lista = []                            //os valores não podem repetir, passar de 100 e ser null 
+var tab = document.getElementById('tab')    //falta fazer a validação acima
 var soma = 0
 var res = document.getElementById('res')
 function adicionar() {
@@ -8,6 +8,7 @@ function adicionar() {
     lista.push(num)
     tab.innerHTML += `<option value="tab${num}">Valor ${num} adicionado.</option>`
 } function finalizar() {
+    soma = 0
     for (let x in lista) {soma += Number(lista[x])}
     res.innerHTML += `<p>Ao todo, temos ${lista.length} números cadastrados.</p>`
     res.innerHTML += `<p>O maior valor informado foi ${Math.max(...lista)}</p>`
