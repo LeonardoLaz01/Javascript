@@ -16,4 +16,11 @@ function contagem() {
         }
     }
     res.innerHTML += '&#127937;'
-}   
+}
+function contagempar() {
+    res.innerHTML += '<h2>Números pares de 1 até 10</h2>'
+    for (let c = 2; c <= 10; c += 2) {
+        res.innerHTML += `${c} &#128073; `
+    }
+    res.innerHTML += '&#127937;'
+}
