@@ -56,3 +56,10 @@ function contint() {
     }
     res.innerHTML += '&#127937;'
 }
+function tabuada() {
+    let num = document.getElementById('num').value
+    res.innerHTML = `<h2>Tabuada de ${num}</h2>`
+    for (let c = 1;c <= 10; c++) {
+        res.innerHTML += `${num} x ${c} = <strong>${num * c}</strong><br>`
+    }
+}
