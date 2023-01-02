@@ -31,3 +31,11 @@ function regressiva() {
     }
     res.innerHTML += '&#127937;'
 }
+function positivo() {
+    let num = document.getElementById('num').value
+    res.innerHTML += `<h2>Contando de 0 até ${num}</h2>`
+    for (let c = 0; c <= Number(num); c++) {
+        res.innerHTML += `${c} &#128073; `
+    }
+    res.innerHTML += '&#127937;'
+}
