@@ -24,3 +24,10 @@ function contagempar() {
     }
     res.innerHTML += '&#127937;'
 }
+function regressiva() {
+    res.innerHTML += '<h2>Contagem Regressiva de 10 a 1</h2>'
+    for (let c = 10; c >= 1; c--) {
+        res.innerHTML += `${c} &#128073; `
+    }
+    res.innerHTML += '&#127937;'
+}
