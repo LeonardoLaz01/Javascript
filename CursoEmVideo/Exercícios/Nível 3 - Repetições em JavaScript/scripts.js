@@ -39,3 +39,20 @@ function positivo() {
     }
     res.innerHTML += '&#127937;'
 }
+function contint() {
+    let inicio = document.getElementById('inicio').value
+    let fim = document.getElementById('fim').value
+    res.innerHTML += `<h2>Contando de ${inicio} até ${fim}</h2>`
+    if (fim > inicio) {
+        for (let c = inicio; c <= fim; c++) {
+            res.innerHTML += `${c} &#128073; `
+        }
+    } else if (inicio > fim) {
+        for (let c = inicio; c >= fim; c--) {
+            res.innerHTML += `${c} &#128073; `
+        }
+    } else {
+        res.innerHTML += 'Não é possível contar, pois os números são iguais '
+    }
+    res.innerHTML += '&#127937;'
+}
