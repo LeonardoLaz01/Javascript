@@ -63,3 +63,13 @@ function tabuada() {
         res.innerHTML += `${num} x ${c} = <strong>${num * c}</strong><br>`
     }
 }
+function fatorial() {
+    let num = document.getElementById('num').value
+    res.innerHTML += `<h2>Calculando ${num}!</h2>`
+    let soma = 1
+    for (let c = Number(num); c > 1; c--) {
+        soma *= c
+        res.innerHTML += `${c} x `
+    }
+    res.innerHTML += `1 = <strong>${soma.toLocaleString('pt-BR')}</strong>`
+}
